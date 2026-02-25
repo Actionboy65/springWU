@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#boxar {
+  display: grid;
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+  padding: 0;
+  margin:0;
+
+  grid-template-columns: 3fr 0.5fr 1fr 1fr;
+  grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
+
+  grid-template-areas:
+    "he he he he"
+    "na na na na"
+    "ma ma s1 s1"
+    "ma ma s2 s2"
+    "ar ar as as"
+    "fo fo fo fo";
+}
+
+header {
+  grid-area: he;
+  background-color: blue;
+}
+
+nav {
+  grid-area: na;
+  background-color: red;
+}
+
+main {
+  grid-area: ma;
+  background-color: purple;
+  border-radius: 25px;
+  background: url(../img/Skärmbild\ 2026-02-25\ 133859.png);
+  background-size:cover;                     
+  ackground-repeat:no-repeat;
+  background-position:center ;    
+  
+  
+  
+ 
+}
+
+#section1 {
+  display:flex;
+  grid-area: s1;
+  background-color: blueviolet;
+   border-radius: 25px;
+ 
+}
+
+#section2 {
+  display:flex;
+  grid-area: s2;
+  background-color: blueviolet;
+   border-radius: 25px;
+  
+}
+
+article {
+  grid-area: ar;
+  background-color: orange;
+   border-radius: 25px;
+  
+}
+
+aside {
+  grid-area: as;
+  background-color: yellow;
+   border-radius: 25px;
+ 
+}
+
+footer {
+  grid-area: fo;
+  background-color: cyan;
+}
+
+
+header, nav, main, section, article, aside, footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+main, section, article, aside{
+margin: 15px;
+
+
+
+}
+
