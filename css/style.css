@@ -26,12 +26,21 @@ body {
 
 header {
   grid-area: he;
-  background-color: blue;
+  background: #8088FF;
+  background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+  font-size:40px;
+  letter-spacing:2px;
+  padding-top: 15px;
+
+
 }
 
 nav {
   grid-area: na;
-  background-color: red;
+  background-color: #d7d9fa;
 }
 
 main {
@@ -88,6 +97,7 @@ main {
   justify-content: end ;
   align-items: center;
   align-content: end;
+  contain: content;
   
   
 
@@ -105,13 +115,15 @@ aside {
 
 footer {
   grid-area: fo;
-  background-color: cyan;
+  background: #8088FF;
+background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
 }
 
 
 header, nav, main, section, article, aside, footer {
   display: flex;
   font-weight: bold;
+  
 }
 
 main, section, article, aside{
@@ -134,3 +146,114 @@ transform: scale(0.98);
 
 
 
+@media (max-width: 600px) {
+
+#boxar {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  grid-template-areas:
+  "he"
+  "na"
+  "ma"
+  "s1"
+  "s2"
+  "ar"
+  "as"
+  "fo";
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+
+  /* Make grid one column, scrollable */
+  #boxar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "he"
+      "na"
+      "ma"
+      "s1"
+      "s2"
+      "ar"
+      "as"
+      "fo";
+    height: auto;         /* allow content to grow */
+    overflow-y: auto;     /* vertical scroll */
+    row-gap: 10px;        /* spacing between sections */
+  }
+
+  /* Header adjustments */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header img {
+    height: 60px;          /* smaller logo */
+    width: auto;
+  }
+
+  header h1 {
+    font-size: 24px;       /* smaller SKISTORE text */
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  header button {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+
+  /* Nav menu */
+  nav {
+    width: 100%;
+    display: none;         /* hidden until toggle */
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(128,136,255,0.9);
+    border-radius: 10px;
+    padding: 5px 0;
+  }
+
+  nav a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  /* Sections, main, aside all scale */
+  main, section, article, aside {
+    width: 95%;
+    margin: 10px auto;
+    min-height: 100px;         /* prevent super tiny boxes */
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* Images inside sections scale */
+  main img, section img, article img, aside img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust font sizes inside sections */
+  main, section, article, aside {
+    font-size: 16px;
+  }
+
+}
