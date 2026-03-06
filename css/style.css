@@ -179,12 +179,11 @@ transform: scale(0.98);
       "ar"
       "as"
       "fo";
-    height: auto;         /* allow content to grow */
-    overflow-y: auto;     /* vertical scroll */
-    row-gap: 10px;        /* spacing between sections */
+    height: auto;       
+    overflow-y: auto;     
+    row-gap: 10px;       
   }
 
-  /* Header adjustments */
   header {
     display: flex;
     flex-direction: column;
@@ -193,12 +192,12 @@ transform: scale(0.98);
   }
 
   header img {
-    height: 60px;          /* smaller logo */
+    height: 60px;         
     width: auto;
   }
 
   header h1 {
-    font-size: 24px;       /* smaller SKISTORE text */
+    font-size: 24px;       
     margin: 5px 0;
     text-align: center;
   }
@@ -212,10 +211,10 @@ transform: scale(0.98);
     margin: 5px 0;
   }
 
-  /* Nav menu */
+ 
   nav {
     width: 100%;
-    display: none;         /* hidden until toggle */
+    display: none;        
     flex-direction: column;
     margin-top: 10px;
     text-align: center;
@@ -235,23 +234,23 @@ transform: scale(0.98);
     display: flex;
   }
 
-  /* Sections, main, aside all scale */
+  
   main, section, article, aside {
     width: 95%;
     margin: 10px auto;
-    min-height: 100px;         /* prevent super tiny boxes */
+    min-height: 100px;         
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
   }
 
-  /* Images inside sections scale */
+
   main img, section img, article img, aside img {
     max-width: 100%;
     height: auto;
   }
 
-  /* Adjust font sizes inside sections */
+ 
   main, section, article, aside {
     font-size: 16px;
   }
