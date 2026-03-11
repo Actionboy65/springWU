@@ -6,11 +6,11 @@ body {
 #boxar {
   display: grid;
   height: 100vh;
-  background-color: #FEFCFF;
+  background-color:white;
   overflow: hidden;
   padding: 0;
-  margin:0;
-  
+  margin: 0;
+
 
   grid-template-columns: 3fr 0.5fr 1fr 1fr;
   grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
@@ -20,7 +20,7 @@ body {
     "na na na na"
     "ma ma s1 s1"
     "ma ma s2 s2"
-    "ar ar as as"
+    "s3 s3 as as"
     "fo fo fo fo";
 }
 
@@ -28,12 +28,13 @@ header {
   grid-area: he;
   background: #8088FF;
   background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
-   justify-content: center;
-   align-items: center;
-   gap: 15px;
-  font-size:40px;
-  letter-spacing:2px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 40px;
+  letter-spacing: 2px;
   padding-top: 15px;
+  color:whitesmoke;
 
 
 }
@@ -41,135 +42,146 @@ header {
 nav {
   grid-area: na;
   background-color: #d7d9fa;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  word-spacing: 75px;
+  font-weight: 500;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ 
+  
+  
+  
+
 }
 
 main {
   grid-area: ma;
-  background-color: purple;
   background: url(../img/Snowboard_hopp.jpg);
-  background-size:cover;                     
-  background-repeat:no-repeat;
-  background-position:center ; 
-  align-items: top;
-  justify-content:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  color:white;
+  font-size: 75px;
+  align-items: center;
+
   
-  
-  
- 
+
+
+
 }
 
 #section1 {
   grid-area: s1;
-  background-color: blueviolet;
   background: url(../img/Hjälmar.png);
-  background-size:cover;                     
-  background-repeat:no-repeat;
-  background-position: 0px -150px ; 
-  align-items: end;
-  justify-content:center;
-  
-
-
- 
-}
-
- 
- #section2 {
-  grid-area: s2;
-  background-color: blueviolet;
-  border-radius: 25px;
-  background: url(../img/skidglasögon.png);
-  background-size:cover;                     
-  background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: 0px -150px;
   align-items: end;
-  justify-content:center;
+  justify-content: center;
+  font-size: 40px;
+  color: rgb(45, 17, 82);
+
+
+
+
+}
+
+
+#section2 {
+  grid-area: s2;
+  border-radius: 25px;
+  background: url(../img/skidglasögon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px -150px;
+  align-items: end;
+  justify-content: center;
+  font-size: 40px;
+  color: rgb(45, 17, 82);
 
 
 }
 
 #section3 {
-  grid-area: ar;
-  background-color: orange;
+  grid-area: s3;
   column-gap: 50px;
   background: whitesmoke;
-  background-repeat:no-repeat;
-  justify-content: end ;
+  background-repeat: no-repeat;
+  justify-content: center;
   align-items: center;
   align-content: end;
   contain: content;
-  
-  
+  font-size: 35px;
+  margin-right: -20px;
+  color: rgb(45, 17, 82);
+  margin-right: 13px;
 
-
-  
 }
 
 aside {
   grid-area: as;
-  background-color: yellow;
-  align-items: end;
+  background: url(../img/service.png);
+  align-items: start;
   justify-content:center;
- 
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 50px;
+  color: white;
+
+  
+
 }
 
 footer {
   grid-area: fo;
   background: #8088FF;
-background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
 }
 
 
-header, nav, main, section, article, aside, footer {
+header,
+nav,
+main,
+section,
+article,
+aside,
+footer {
   display: flex;
   font-weight: bold;
-  
-}
-
-main, section, article, aside{
-margin: 15px;
-filter: brightness(0.8);
-transition: 0.8s;
-border-radius: 15px;
-
-
-
 
 }
 
-:is(main, #section1, #section2, #section3, aside):hover{
-margin: 15px;
-filter: brightness(1);
-transition: 0.8s;
-transform: scale(0.98);
+main,
+section,
+article,
+aside {
+  margin: 15px;
+  filter: brightness(0.8);
+  transition: 0.8s;
+  border-radius: 15px;
+
+
+
+
+}
+
+:is(main, #section1, #section2, #section3, aside):hover {
+  margin: 15px;
+  filter: brightness(1);
+  transition: 0.8s;
+  transform: scale(0.98);
 }
 
 
 
 @media (max-width: 600px) {
 
-#boxar {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-
-  grid-template-areas:
-  "he"
-  "na"
-  "ma"
-  "s1"
-  "s2"
-  "ar"
-  "as"
-  "fo";
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-
-  /* Make grid one column, scrollable */
   #boxar {
-    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
     grid-template-areas:
       "he"
       "na"
@@ -179,9 +191,29 @@ transform: scale(0.98);
       "ar"
       "as"
       "fo";
-    height: auto;       
-    overflow-y: auto;     
-    row-gap: 10px;       
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  
+  #boxar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "he"
+      "na"
+      "ma"
+      "s1"
+      "s2"
+      "s3"
+      "as"
+      "fo";
+    height: auto;
+    overflow-y: auto;
+    row-gap: 10px;
   }
 
   header {
@@ -192,12 +224,12 @@ transform: scale(0.98);
   }
 
   header img {
-    height: 60px;         
+    height: 60px;
     width: auto;
   }
 
   header h1 {
-    font-size: 24px;       
+    font-size: 24px;
     margin: 5px 0;
     text-align: center;
   }
@@ -211,14 +243,14 @@ transform: scale(0.98);
     margin: 5px 0;
   }
 
- 
+
   nav {
     width: 100%;
-    display: none;        
+    display: none;
     flex-direction: column;
     margin-top: 10px;
     text-align: center;
-    background-color: rgba(128,136,255,0.9);
+    background-color: rgba(128, 136, 255, 0.9);
     border-radius: 10px;
     padding: 5px 0;
   }
@@ -234,25 +266,70 @@ transform: scale(0.98);
     display: flex;
   }
 
-  
-  main, section, article, aside {
+
+  main,
+  section,
+  article,
+  aside {
     width: 95%;
     margin: 10px auto;
-    min-height: 100px;         
+    min-height: 100px;
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
+    
   }
 
 
-  main img, section img, article img, aside img {
+  main img,
+  section img,
+  article img,
+  aside img {
     max-width: 100%;
     height: auto;
   }
 
- 
-  main, section, article, aside {
+
+  main,
+  #section1,
+  #section2,
+  #section3,
+  article,
+  aside {
     font-size: 16px;
   }
+
+  
+
+#boxar2 {
+  display: grid;
+  height: 100vh;
+  background-color:white;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+
+  grid-template-columns: 3fr 0.5fr 1fr 1fr;
+  grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
+
+  grid-template-areas:
+    "he he he he"
+    "na na na na"
+    "ma ma s1 s1"
+    "ma ma s2 s2"
+    "ma ma s2 as"
+    "fo fo fo fo";
+} 
+
+
+
+
+
+
+
+
+
+
 
 }
