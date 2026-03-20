@@ -6,15 +6,12 @@ body {
 #boxar {
   display: grid;
   height: 100vh;
-  background-color:white;
+  background-color: white;
   overflow: hidden;
   padding: 0;
   margin: 0;
-
-
   grid-template-columns: 3fr 0.5fr 1fr 1fr;
   grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
-
   grid-template-areas:
     "he he he he"
     "na na na na"
@@ -26,7 +23,6 @@ body {
 
 header {
   grid-area: he;
-  background: #8088FF;
   background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
   justify-content: center;
   align-items: center;
@@ -34,9 +30,7 @@ header {
   font-size: 40px;
   letter-spacing: 2px;
   padding-top: 15px;
-  color:whitesmoke;
-
-
+  color: whitesmoke;
 }
 
 nav {
@@ -47,12 +41,7 @@ nav {
   letter-spacing: 3px;
   word-spacing: 75px;
   font-weight: 500;
-  font-family:Georgia, 'Times New Roman', Times, serif;
- 
-  
-  
-  
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main {
@@ -61,15 +50,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  justify-content: center;
-  color:white;
+  color: white;
   font-size: 75px;
-  align-items: center;
-
-  
-
-
-
 }
 
 #section1 {
@@ -78,16 +60,10 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -150px;
-  align-items: end;
-  justify-content: center;
   font-size: 40px;
   color: rgb(45, 17, 82);
-
-
-
-
+  overflow: hidden;
 }
-
 
 #section2 {
   grid-area: s2;
@@ -96,50 +72,36 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -150px;
-  align-items: end;
-  justify-content: center;
   font-size: 40px;
   color: rgb(45, 17, 82);
-
-
+  overflow: hidden;
 }
 
 #section3 {
   grid-area: s3;
-  column-gap: 50px;
   background: whitesmoke;
   background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-  align-content: end;
-  contain: content;
   font-size: 35px;
-  margin-right: -20px;
-  color: rgb(45, 17, 82);
   margin-right: 13px;
-
+  color: rgb(45, 17, 82);
+  overflow: hidden;
 }
 
 aside {
   grid-area: as;
   background: url(../img/service.png);
   align-items: start;
-  justify-content:center;
+  justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 50px;
   color: white;
-
-  
-
 }
 
 footer {
   grid-area: fo;
-  background: #8088FF;
   background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
 }
-
 
 header,
 nav,
@@ -150,7 +112,6 @@ aside,
 footer {
   display: flex;
   font-weight: bold;
-
 }
 
 main,
@@ -161,46 +122,91 @@ aside {
   filter: brightness(0.8);
   transition: 0.8s;
   border-radius: 15px;
-
-
-
-
 }
 
 :is(main, #section1, #section2, #section3, aside):hover {
-  margin: 15px;
   filter: brightness(1);
   transition: 0.8s;
   transform: scale(0.98);
 }
 
+.clickable-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
 
+main .clickable-box {
+  justify-content: center;
+  align-items: center;
+}
 
-@media (max-width: 600px) {
+main .clickable-box-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#section1 .clickable-box,
+#section2 .clickable-box {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+#section1 .clickable-box-content,
+#section2 .clickable-box-content {
+  flex-grow: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section3 .clickable-box {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#section3 img {
+  width: 23%;
+  max-height: 100%;
+  object-fit: contain;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+@media screen and (max-width: 400px) {
   #boxar {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-
     grid-template-areas:
       "he"
       "na"
       "ma"
       "s1"
       "s2"
-      "ar"
+      "s3"
       "as"
       "fo";
   }
-
 }
 
-
 @media (max-width: 768px) {
-
-  
   #boxar {
     display: grid;
+    grid-template-rows: none;
     grid-template-columns: 1fr;
     grid-template-areas:
       "he"
@@ -234,16 +240,6 @@ aside {
     text-align: center;
   }
 
-  header button {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin: 5px 0;
-  }
-
-
   nav {
     width: 100%;
     display: none;
@@ -266,7 +262,6 @@ aside {
     display: flex;
   }
 
-
   main,
   section,
   article,
@@ -277,18 +272,7 @@ aside {
     box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
-    
   }
-
-
-  main img,
-  section img,
-  article img,
-  aside img {
-    max-width: 100%;
-    height: auto;
-  }
-
 
   main,
   #section1,
@@ -298,38 +282,138 @@ aside {
   aside {
     font-size: 16px;
   }
+}
 
-  
 
 #boxar2 {
   display: grid;
   height: 100vh;
-  background-color:white;
+  background-color: rgb(173, 236, 255);
   overflow: hidden;
   padding: 0;
   margin: 0;
-
-
-  grid-template-columns: 3fr 0.5fr 1fr 1fr;
-  grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
-
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 50px 1fr 1fr 300px 50px;
   grid-template-areas:
-    "he he he he"
-    "na na na na"
-    "ma ma s1 s1"
-    "ma ma s2 s2"
-    "ma ma s2 as"
-    "fo fo fo fo";
-} 
+    "hh hh hh hh"
+    "nn nn nn nn"
+    "mm mm ss ss"
+    "mm mm sn sn"
+    "sb sb aa aa"
+    "ff ff ff ff";
+}
+
+#boxar2 header {
+  grid-area: hh;
+}
+
+#boxar2 nav {
+  grid-area: nn;
+}
+
+#boxar2 main {
+  display: flex;
+  grid-area: mm;
+  background-image: url(../img/snowboard_produkt.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: rgb(106, 106, 255);
+  border-style: solid;
+  border-width: 10px;
+  
+  
+}
+
+#section11 {
+  grid-area: ss;
+ ;
+}
+
+#section22 {
+  grid-area: sn;
+}
+
+#section33 {
+  grid-area: sb;
+}
+
+#boxar2 aside {
+  grid-area: aa;
+  
+}
+
+#boxar2 footer {
+  grid-area: ff;
+}
 
 
 
+#boxar2 main,
+#boxar2 section,
+#boxar2 aside {
+  filter: none;
+  transition: none;
+  transform: none;
+}
 
+#boxar2 main:hover,
+#boxar2 section:hover,
+#boxar2 aside:hover {
+  filter: none;
+  transition: none;
+  transform: none;
+ 
+}
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
 
+.product-card img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
 
+.product-info {
+  padding: 10px 14px;
+  background: white;
+}
 
+.product-name {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #1a1a1a;
+  font-family: fantasy;
+  letter-spacing: 5px;
+}
 
+.product-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
 
+.price-old {
+  font-size: 20px;
+  color: #999;
+  text-decoration: line-through;
+}
 
+.price-new {
+  font-size: 20px;
+  font-weight: 700;
+  color: #c00;
+}
+
+.price-lowest {
+  font-size: 20px;
+  color: #888;
+  margin: 0;
 }

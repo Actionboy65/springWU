@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
+  <meta charset="UTF-8">
   <title>SKISTORE</title>
   <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div id="boxar">
-    <header><img src="..//img/logo.png" alt="produkt1" height="100px"> <h1>SKISTORE</h1>         </header>
-    <nav>Skidor Pjäxor Skidutrustning  Skidkläder Varumärken Service</nav>
-    <main> BRÄDOR</main>
-    <section id="section1">HJÄLMAR</section>
-    <section id="section2">SKIDGLASÖGON</section>
-    <section id="section3"> Jackor  
-      <img src="..//img/produkt1.png" alt="produkt1" >
-      <img src="..//img/produkt2.png" alt="produkt2" >
-      <img src="..//img/produkt3.png" alt="produkt3" >
-      <img src="..//img/produkt4.png" alt="produkt4" >
-    
-    
-    
+    <header>
+      <img src="../img/logo.png" alt="produkt1" height="100px">
+      <h1>SKISTORE</h1>
+    </header>
+
+    <nav>Skidor Pjäxor Skidutrustning Skidkläder Varumärken Service</nav>
+
+    <main>
+      <a href="brädor.html" class="clickable-box">
+        <div class="clickable-box-content">BRÄDOR</div>
+      </a>
+    </main>
+
+    <section id="section1">
+      <a href="hjalmar.html" class="clickable-box" style="align-items:flex-end; padding-bottom:16px;">
+        <div class="clickable-box-content">HJÄLMAR</div>
+      </a>
     </section>
-    <aside>SERIVCE</aside>
+
+    <section id="section2">
+      <a href="skidglasogon.html" class="clickable-box" style="align-items:flex-end; padding-bottom:16px;">
+        <div class="clickable-box-content">SKIDGLASÖGON</div>
+      </a>
+    </section>
+
+    <section id="section3">
+      <a href="jackor.html" class="clickable-box" style="display:flex; flex-direction:row; align-items:center; justify-content:center; gap:10px; width:100%; height:100%;">
+        <img src="../img/produkt1.png" alt="produkt1" style="width:23%; height:auto; object-fit:cover;">
+        <img src="../img/produkt2.png" alt="produkt2" style="width:23%; height:auto; object-fit:cover;">
+        <img src="../img/produkt3.png" alt="produkt3" style="width:23%; height:auto; object-fit:cover;">
+        <img src="../img/produkt4.png" alt="produkt4" style="width:23%; height:auto; object-fit:cover;">
+      </a>
+    </section>
+
+    <aside>
+      <a href="service.html" class="clickable-box">
+        <div class="clickable-box-content">SERVICE</div>
+      </a>
+    </aside>
+
     <footer>FOOTER</footer>
   </div>
 </body>
