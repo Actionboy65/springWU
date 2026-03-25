@@ -1,0 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("themeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("Dark");
+    console.log("clicked");
+  });
+});

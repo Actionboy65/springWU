@@ -305,6 +305,14 @@ main .clickable-box-content {
 
 #boxar2 header {
   grid-area: hh;
+  background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 80px;
+  letter-spacing: 2px;
+  padding-top: 15px;
+  color: whitesmoke;
 }
 
 #boxar2 nav {
@@ -327,19 +335,24 @@ main .clickable-box-content {
 
 #section11 {
   grid-area: ss;
+  
  ;
 }
 
 #section22 {
   grid-area: sn;
+  
 }
 
 #section33 {
   grid-area: sb;
+  
 }
 
 #boxar2 aside {
   grid-area: aa;
+  background-image:url() ;
+  
   
 }
 
@@ -416,4 +429,9 @@ main .clickable-box-content {
   font-size: 20px;
   color: #888;
   margin: 0;
+}
+
+
+.Dark #boxar {
+  background-color: rgb(31, 27, 43);
 }
