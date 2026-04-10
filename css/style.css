@@ -346,24 +346,41 @@ main .clickable-box-content {
 
 #section11 {
   grid-area: ss;
-   display: flex;
-  background-image: url(../img/snowboard2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-
-  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 520px;
+  background: transparent;
 }
 
 #section22 {
   grid-area: sn;
-   display: flex;
-  background-image: url(../img/snowboard3.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 520px;
+  background: transparent;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 520px;
+  height: 320px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
 
+.board2-image {
+  background-image: url(../img/snowboard2.png);
+}
+
+.board3-image {
+  background-image: url(../img/snowboard3.png);
 }
 
 #section33 {
@@ -551,37 +568,125 @@ main .clickable-box-content {
 #boxar3 main {
   display: flex;
   grid-area: mm;
-  background-image: url(../img/snowboard_produkt.png);
+  background-image: url(../img/helmet1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-color: rgb(106, 106, 255);
   border-style: solid;
   border-width: 10px;
+}
 
-
+#section111,
+#section222 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  min-height: 520px;
 }
 
 #section111 {
   grid-area: ss;
-   display: flex;
-  background-image: url(../img/snowboard2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-
-  ;
+  background: transparent;
 }
 
 #section222 {
   grid-area: sn;
-   display: flex;
-  background-image: url(../img/snowboard3.png);
+  background: transparent;
+}
+
+.section-image {
+  width: 100%;
+  max-width: 520px;
+  height: 320px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
 
+.helmet2-image {
+  background-image: url(../img/helmet2.png);
+}
+
+.helmet3-image {
+  background-image: url(../img/helmet3.png);
+}
+
+.section-card {
+  max-width: 520px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 60, 0.16);
+  border: 1px solid rgba(15, 23, 60, 0.08);
+  margin-top: 20px;
+}
+
+.section-price-label {
+  margin-top: 18px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 60, 0.12);
+  font-weight: 700;
+  color: #222b60;
+}
+
+.section-card h2 {
+  margin: 0 0 12px;
+  color: #1c2260;
+}
+
+.section-card p {
+  margin: 0 0 16px;
+  color: #4a4f70;
+  line-height: 1.65;
+}
+
+.section-card .price-tag {
+  margin-top: 16px;
+  font-weight: 700;
+  color: #222b60;
+  font-size: 20px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #6a6f8c;
+}
+
+.helmet-card h1,
+.helmet-card h2 {
+  margin: 0 0 12px;
+  color: #1c2260;
+}
+
+.helmet-card p {
+  margin: 0 0 18px;
+  color: #4a4f70;
+  line-height: 1.65;
+}
+
+.helmet-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #6a6f8c;
+}
+
+.helmet-card .price-tag {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1a1a60;
 }
 
 #section333 {
