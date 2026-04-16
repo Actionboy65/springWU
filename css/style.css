@@ -375,6 +375,10 @@ main.snowboard {
   background-image: url(../img/snowboard_produkt.png);
 }
 
+main.skidglasögon {
+  background-image: url(../img/skidglasögon1.png);
+}
+
 .section-image {
   width: 100%;
   max-width: 520px;
@@ -384,13 +388,6 @@ main.snowboard {
   background-position: center;
 }
 
-.board2-image {
-  background-image: url(../img/snowboard2.png);
-}
-
-.board3-image {
-  background-image: url(../img/snowboard3.png);
-}
 
 #section33 {
   grid-area: sb;
@@ -482,6 +479,23 @@ main.snowboard {
 
 .helmet3-image {
   background-image: url(../img/helmet3.png);
+}
+
+.snowboard2-image {
+  background-image: url(../img/snowboard2.png);
+
+}
+
+.snowboard3-image {
+  background-image: url(../img/snowboard3.png);
+}
+
+.skidglasögon2-image {
+  background-image: url(../img/skidglasögon2.png);
+}
+
+.skidglasögon3-image {
+  background-image: url(../img/skidglasögon3.png);
 }
 
 
