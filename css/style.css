@@ -14,7 +14,7 @@ a:hover {
 #boxar {
   display: grid;
   height: 100vh;
-  background-color: white;
+  background-color: #dcf5ff;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -31,7 +31,7 @@ a:hover {
 
 header {
   grid-area: he;
-  background: linear-gradient(90deg, rgba(128, 136, 255, 1) 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
+  background: linear-gradient(90deg, #8088ff 0%, rgba(54, 60, 145, 1) 40%, rgba(58, 64, 145, 1) 60%, rgba(128, 136, 255, 1) 100%);
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -43,7 +43,7 @@ header {
 
 nav {
   grid-area: na;
-  background-color: #d7d9fa;
+  background-color: #d6d8fa;
   justify-content: center;
   align-items: center;
   letter-spacing: 3px;
@@ -579,3 +579,169 @@ main.skidglasögon {
     border-color: transparent;
   }
 }
+
+#boxar3 { 
+  
+  filter: none;
+  transition: none;
+  transform: none;
+  display: grid;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  background-color: rgb(173, 236, 255);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: 3fr 0.5fr 1fr 1fr;
+  grid-template-rows: 100px 50px 1fr 1fr 200px 50px;
+  grid-template-areas:
+    "hh hh hh hh"
+    "nn nn nn nn"
+    "mm mm s1 s1"
+    "mm mm s1 s1"
+    "as as as as"
+    "ff ff ff ff";
+}
+
+#boxar3 header{
+  grid-area: hh; 
+  font-size: 80px;
+  margin-top: 5px;
+}
+
+#boxar3 nav{
+  grid-area: nn;
+  background-color: #d7d9fa;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  word-spacing: 75px;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#boxar3 main{
+  grid-area: mm;
+  background-color: rgb(0, 0, 0);
+  background-image: url(../img/service1.png);
+}
+
+#section111{
+  grid-area: s1;
+  display: flex;
+  background-color: rgb(164, 198, 241);
+  flex-direction: column;
+}
+
+#boxar3 aside{
+  grid-area: as;
+  background-image: url(../img/widephoto.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#boxar3 footer{
+  grid-area: fo;
+}
+
+@media screen and (max-width: 400px) {
+  #boxar {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "he"
+      "na"
+      "ma"
+      "s1"
+      "s2"
+      "s3"
+      "as"
+      "fo";
+  }
+}
+
+@media (max-width: 768px) {
+  #boxar {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "he"
+      "na"
+      "ma"
+      "s1"
+      "s2"
+      "s3"
+      "as"
+      "fo";
+    height: auto;
+    overflow-y: auto;
+    row-gap: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  #boxar header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     height: 40px;
+    width: auto;
+    
+  }
+
+  #boxar header img {
+    height: 60px;
+    width: auto;
+  }
+
+  #boxar header h1 {
+    font-size: 24px!important;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  #boxar nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(128, 136, 255, 0.9);
+    border-radius: 10px;
+    padding: 5px 0;
+  }
+
+  #boxar nav a {
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  #boxar nav.show {
+    display: flex;
+  }
+
+  #boxar main,
+  #boxar section,
+  #boxar aside {
+    width: 95%;
+    margin: 10px auto;
+    min-height: 100px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #boxar main,
+  #section1,
+  #section2,
+  #section3,
+  #boxar aside {
+    font-size: 16px;
+  }
+}
+
