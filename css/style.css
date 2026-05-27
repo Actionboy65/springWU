@@ -67,7 +67,7 @@ main {
 
 #section1 {
   grid-area: s1;
-  background: url(../img/Hjälmar.png);
+  background: url(../img/Hjalmar.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -150px;
@@ -79,7 +79,7 @@ main {
 #section2 {
   grid-area: s2;
   border-radius: 25px;
-  background: url(../img/skidglasögon.png);
+  background: url(../img/skidglasogon.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px -150px;
@@ -375,8 +375,8 @@ main.snowboard {
   background-image: url(../img/snowboard_produkt.png);
 }
 
-main.skidglasögon {
-  background-image: url(../img/skidglasögon1.png);
+main.skidglasogon {
+  background-image: url(../img/skidglasogon1.png);
 }
 
 .section-image {
@@ -490,12 +490,12 @@ main.skidglasögon {
   background-image: url(../img/snowboard3.png);
 }
 
-.skidglasögon2-image {
-  background-image: url(../img/skidglasögon2.png);
+.skidglasogon2-image {
+  background-image: url(../img/skidglasogon2.png);
 }
 
-.skidglasögon3-image {
-  background-image: url(../img/skidglasögon3.png);
+.skidglasogon3-image {
+  background-image: url(../img/skidglasogon3.png);
 }
 
 
@@ -539,6 +539,14 @@ main.skidglasögon {
 }
 
 .Dark #boxar {
+  background-color: rgb(31, 27, 43);
+}
+
+.Dark #boxar2 {
+  background-color: rgb(31, 27, 43);
+}
+
+.Dark #boxar3 {
   background-color: rgb(31, 27, 43);
 }
 
